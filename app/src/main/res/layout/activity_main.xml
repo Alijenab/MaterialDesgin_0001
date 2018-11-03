@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityMain">
+
+
+    <ImageView
+        android:id="@+id/form_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/form_background" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/standard_margin"
+            android:text="اطلاعات کاربری"
+            android:textColor="@color/white"
+            android:textSize="@dimen/normal_font_size" />
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="@dimen/standard_margin"
+            android:background="@null"
+            android:src="@drawable/ic_action_back_white" />
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btn_change_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/form_background"
+        android:layout_alignBottom="@+id/form_background"
+        android:text="تغیر عکس" />
+
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="62dp"
+        android:layout_above="@id/btn_change_pic"
+        android:layout_alignLeft="@id/btn_change_pic"
+        android:layout_alignRight="@id/btn_change_pic"
+        android:src="@drawable/default_avatar" />
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/form_background"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/form_background"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_margin="@dimen/standard_margin"
+            android:text="اطلاعات کاربری"
+            android:textSize="@dimen/normal_font_size" />
+
+        <EditText
+            android:id="@+id/txt_fistname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="@dimen/standard_margin"
+            android:hint="نام"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:textSize="@dimen/normal_font_size"
+
+            />
+
+        <EditText
+            android:id="@+id/txt_lastname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="@dimen/standard_margin"
+            android:hint="نام خانوادگی"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:textSize="@dimen/normal_font_size" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_margin="@dimen/standard_margin"
+            android:text="تخصص ها"
+            android:textSize="@dimen/normal_font_size" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:text="CSS" />
+
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/standard_margin"
+
+                android:text="HTML" />
+
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:checked="true"
+                android:text="JAVA" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_margin="@dimen/standard_margin"
+            android:text="جنسیت"
+            android:textSize="@dimen/normal_font_size" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:text="مرد" />
+
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:text="زن" />
+        </LinearLayout>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="16dp"
+            android:text="ثبت اطلاعات"/>
+
+    </LinearLayout>
+
+
+</ScrollView>
+
+</RelativeLayout>
